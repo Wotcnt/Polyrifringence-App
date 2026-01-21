@@ -1,3 +1,5 @@
+![CI](https://github.com/Wotcnt/Polyrifringence-App/actions/workflows/ci.yml/badge.svg)
+
 # Polyrifringence App (Streamlit)
 
 Streamlit web interface for interacting with the bundled `poly_engine` package.
