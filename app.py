@@ -782,19 +782,19 @@ def render_verification(engine, sim_params, strict_canon: bool):
         # Plots
         fig1 = go.Figure(data=[go.Histogram(x=cycles, nbinsx=20, name="Cycles")])
         fig1.update_layout(title="Cycle count distribution")
-        st.plotly_chart(fig1, , use_container_width=True, key="verify_chart_1")
+        st.plotly_chart(fig1, use_container_width=True, key="verify_chart_1")
 
         fig2 = go.Figure(data=[go.Histogram(x=[x for x in hl if x != float('inf')], nbinsx=30, name="Half-life (s)")])
         fig2.add_vline(x=0.18, line_dash="dash")
         fig2.add_vline(x=0.24, line_dash="dash")
         fig2.update_layout(title="Half-life distribution (seconds)")
-        st.plotly_chart(fig2, , use_container_width=True, key="verify_chart_2")
+        st.plotly_chart(fig2, use_container_width=True, key="verify_chart_2")
 
         fig3 = go.Figure(data=[go.Histogram(x=lam, nbinsx=30, name="λ_cycle")])
         fig3.add_vline(x=0.0013, line_dash="dash")
         fig3.add_vline(x=0.0023, line_dash="dash")
         fig3.update_layout(title="λ_cycle distribution (raw)")
-        st.plotly_chart(fig3, , use_container_width=True, key="verify_chart_3")
+        st.plotly_chart(fig3, use_container_width=True, key="verify_chart_3")
 
         # Export as JSON
         st.download_button(
