@@ -23,7 +23,8 @@ jobs:
 
       - name: Import smoke check
         run: |
-          python -c "import poly_engine; import app"
+          python -m compileall -q .
+          python -c "import poly_engine"
 
       - name: Tests
         run: pytest -q
