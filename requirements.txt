@@ -1,0 +1,8 @@
+streamlit
+numpy
+torch
+plotly
+matplotlib
+
+# install local package (src/poly_engine) for app imports
+-e .
